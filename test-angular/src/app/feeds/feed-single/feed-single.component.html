@@ -1,12 +1,9 @@
-<div *ngIf="feedback && feedback.user" class="jumbotron text-center">
-  <h1>{{ feedback.user.fullname }}</h1>
-</div>
-<div><a routerLink="/"><button class="btn btn-primary" >Back</button></a></div>
-<div *ngIf="feedback && feedback.user">
-    <div  class="quote">
-        <img  [src]="feedback.user.picture_url" class="avatar">
-        <span  class="quote-name"> {{ feedback.user.fullname }} </span>
-        - {{ feedback.user.specialty.translations[0].name }}, {{ feedback.user.country.translations[0].name }}
-        <blockquote class="quote-quote"> "{{ feedback.translations[0].content }}" </blockquote>
+
+    <div *ngIf="feedback && feedback.user">
+        <div  class="quote">
+            <img  [src]="feedback.user.picture_url" class="avatar">
+            <span  class="quote-name"> {{ feedback.user.fullname }} </span>
+            - {{ feedback.user.specialty.translations[0].name }}, {{ feedback.user.country.translations[0].name }}
+            <blockquote class="quote-quote"> "{{ feedback.translations[0].content }}" </blockquote>
+        </div>
     </div>
-</div>

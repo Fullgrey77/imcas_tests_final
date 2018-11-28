@@ -4,7 +4,6 @@ import {Specialty} from './specialty.model';
 export class User {
     id: number;
     title: string;
-    username: string;
     first_name: string;
     last_name: string;
     fullname: string;
@@ -12,12 +11,11 @@ export class User {
     picture_url: string;
     country: Country;
     specialty: Specialty;
-    company: Boolean;
+    company: boolean;
 
     constructor(obj?: any) {
         this.id = obj && obj.id;
         this.title = obj && obj.title;
-        this.username = obj && obj.username;
         this.first_name = obj && obj.first_name;
         this.last_name = obj && obj.last_name;
         this.fullname = obj && obj.fullname;
@@ -28,5 +26,4 @@ export class User {
         this.company = obj && obj.company;
 
     }
-
 }

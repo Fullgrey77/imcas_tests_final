@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FeedbackService } from '../../shared/services/feedback.service';
 import {Feedback} from '../../shared/models/feedback.model';
@@ -9,8 +9,8 @@ import {Feedback} from '../../shared/models/feedback.model';
   styleUrls: ['../feeds-list/feeds-list.component.css']
 })
 export class FeedSingleComponent implements OnInit {
+  @Input() feedback: Feedback;
 
-  feedback: Feedback;
 
   constructor(public service: FeedbackService, private route: ActivatedRoute) { }
 
