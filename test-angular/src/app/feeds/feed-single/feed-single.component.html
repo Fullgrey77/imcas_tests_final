@@ -1,9 +1,8 @@
-
-    <div *ngIf="feedback && feedback.user">
-        <div  class="quote">
-            <img  [src]="feedback.user.picture_url" class="avatar">
-            <span  class="quote-name"> {{ feedback.user.fullname }} </span>
-            - {{ feedback.user.specialty.translations[0].name }}, {{ feedback.user.country.translations[0].name }}
-            <blockquote class="quote-quote"> "{{ feedback.translations[0].content }}" </blockquote>
-        </div>
+<div *ngIf="feedback && feedback.user">
+    <div  class="quote">
+        <img  [src]="feedback.user.picture_url" class="avatar">
+        <span  class="quote-name"> {{ feedback.user.fullname }} </span>
+        - {{ feedback.user.specialty.translations[0].name }}, {{ feedback.user.country.translations[0].name }}
+        <blockquote class="quote-quote"> "{{ feedback.translations[0].content }}" </blockquote>
     </div>
+</div>

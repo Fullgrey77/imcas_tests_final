@@ -8,8 +8,6 @@ import {Feedback} from './shared/models/feedback.model';
     templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-    title = 'imcas-angular';
-
     feedbacks: Feedback[];
 
     constructor(private service: FeedbackService) {

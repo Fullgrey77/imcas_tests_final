@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 import {FeedbackService} from 'src/app/shared/services/feedback.service';
 import {Feedback} from '../../shared/models/feedback.model';
+import {DataService} from '../../shared/services/data.service';
 
 
 @Component({
@@ -11,12 +12,14 @@ import {Feedback} from '../../shared/models/feedback.model';
 })
 export class FeedsListComponent implements OnInit {
     feedbacks: Feedback[];
-
-    constructor(private service: FeedbackService) {
+    title: string;
+    constructor(private service: FeedbackService, private data: DataService) {
     }
 
     ngOnInit() {
         this.service.getFeedbacks()
             .subscribe(feedbacks => this.feedbacks = feedbacks);
+        this.data.changeMessage('Feedbacks');
+        this.data.currentMessage.subscribe(title => this.title = title);
     }
 }

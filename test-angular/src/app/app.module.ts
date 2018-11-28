@@ -9,6 +9,7 @@ import {FeedsListComponent} from './feeds/feeds-list/feeds-list.component';
 import {FeedSingleComponent} from './feeds/feed-single/feed-single.component';
 import {LocalePipe} from './locale.pipe';
 import {HttpClientModule} from '@angular/common/http';
+import {DataService} from './shared/services/data.service';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import {HttpClientModule} from '@angular/common/http';
         FormsModule
     ],
     providers: [
-        FeedbackService
+        FeedbackService,
+        DataService
     ],
     bootstrap: [AppComponent]
 })
