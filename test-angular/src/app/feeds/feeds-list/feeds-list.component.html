@@ -1,0 +1,16 @@
+<div class="jumbotron text-center">
+    <h1>Feedbacks</h1>
+</div>
+  
+<div class="feeds-list list-group" *ngIf="feedbacks">
+
+  <div class="list-group-item" *ngFor="let feedback of feedbacks " [routerLink]="[ '/feeds', feedback.id ]">
+    <div  class="quote">
+      <img  [src]="feedback.user.picture_url" class="avatar">
+      <span  class="quote-name"> {{ feedback.user.fullname }} </span>
+      - {{ feedback.user.specialty.translations[0].name }}, {{ feedback.user.country.translations[0].name }}
+      <blockquote class="quote-quote"> "{{ feedback.translations[0].content }}" </blockquote>
+    </div>
+  </div>
+
+</div>
